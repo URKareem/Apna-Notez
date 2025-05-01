@@ -91,6 +91,62 @@ a{
     text-align: center;
     margin-top: auto;
   }
+
+
+/* Full dark overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* dark background */
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card in center */
+.verify-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Verify button */
+.verify-card a {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.note-section {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.note-section h4 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.note-section p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
   
   /* Responsive Image Height for Smaller Devices */
   @media (max-width: 600px) {
