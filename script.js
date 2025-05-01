@@ -1,42 +1,34 @@
-  const directLinks = ["q.pdf", "b.pdf", "c.pdf", "d.pdf"];
-  const buttons = [
-    document.getElementById("btn1"),
-    document.getElementById("btn2"),
-    document.getElementById("btn3"),
-    document.getElementById("btn4"),
-  ];
-  const verifyCard = document.getElementById("verifyCard");
-  const verifyBtn = document.getElementById("verifyBtn");
-  const verificationLink = "https://cuty.io/ApnaNotez"; // replace with your Cuty.io URL
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const isVerifiedNow = urlParams.get("verified") === "true";
-
-  if (isVerifiedNow) {
-    localStorage.setItem("verifiedTime", Date.now());
-    window.history.replaceState({}, document.title, window.location.pathname);
-  }
-
-  const lastVerified = localStorage.getItem("verifiedTime");
-  const now = Date.now();
-  const oneDay = 24 * 60 * 60 * 1000;
-  const expired = !lastVerified || (now - parseInt(lastVerified)) > oneDay;
-
-  if (expired) {
-    // Show verify card
-    document.getElementById("overlay").style.display = "flex";
-    verifyBtn.href = `${verificationLink}?redirect=${encodeURIComponent(window.location.href + "?verified=true")}`;
-
-    // Disable buttons
-    buttons.forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        alert("Please verify first to unlock downloads.");
-      });
-    });
-  } else {
-    // Already verified
-    buttons.forEach((btn, i) => {
-      btn.href = directLinks[i];
-    });
-  }
+window.addEventListener("DOMContentLoaded", () => {
+    // 1. Set the Cuty.io verification link
+    const verifyBtn = document.getElementById("verifyBtn");
+    verifyBtn.href = "https://cuty.io/ApnaNotez?redirect=https://apnanotez.netlify.app/?verified=true";
+  
+    // 2. Handle the verification flag in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const isVerifiedNow = urlParams.get("verified") === "true";
+  
+    if (isVerifiedNow) {
+      localStorage.setItem("verifiedTime", Date.now());
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  
+    // 3. Check if verification is expired
+    const lastVerified = localStorage.getItem("verifiedTime");
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+    const expired = !lastVerified || (now - parseInt(lastVerified)) > oneDay;
+  
+    // 4. Show/hide overlay and unlock buttons
+    const overlay = document.getElementById("overlay");
+  
+    if (expired) {
+      overlay.style.display = "flex";
+    } else {
+      overlay.style.display = "none";
+      document.getElementById("btn1").href = "https://drive.google.com/uc?export=download&id=1-vK82Ok_70i3BFFShglzNw-SURwtSLCd";
+      document.getElementById("btn2").href = "https://drive.google.com/uc?export=download&id=1pNSelAiCBONJw6VM8nyiipBW3hBcktpw";
+      document.getElementById("btn3").href = "https://drive.google.com/uc?export=download&id=1J8GZvXt62yN3yZ4bgsY43dIxHfmtC2hT";
+      document.getElementById("btn4").href = "https://drive.google.com/uc?export=download&id=1X4r8IAjE4dmdUQCaV289bZqZzxVv4QuZ";
+    }
+  });
+  
