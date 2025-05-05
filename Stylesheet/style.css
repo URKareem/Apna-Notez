@@ -5,6 +5,7 @@
   --light: #f5f7fa;
   --accent1: #4facfe;
   --accent2: #f093fb;
+  --accent3: #4CAF50;
 }
 
 * {
@@ -175,6 +176,12 @@ h1 {
   background: linear-gradient(135deg, var(--accent2), #f5576c);
 }
 
+.book:nth-child(4) {
+  animation-delay: 3s;
+  background: linear-gradient(135deg, var(--accent3), #8BC34A); 
+}
+
+
 .book:hover {
   transform: perspective(500px) rotateY(-10deg) translateY(-8px);
   box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.2);
@@ -203,6 +210,11 @@ h1 {
   background: linear-gradient(135deg, var(--accent2), #f5576c);
 }
 
+.book:nth-child(4)::before {
+  background: linear-gradient(135deg, var(--accent3), #8BC34A);
+}
+
+
 .book::after {
   content: '';
   position: absolute;
@@ -224,6 +236,11 @@ h1 {
 .book:nth-child(3)::after {
   background: linear-gradient(135deg, var(--accent2), #f5576c);
 }
+
+.book:nth-child(4)::after {
+  background: linear-gradient(135deg, var(--accent3), #8BC34A);
+}
+
 
 .formats {
   display: flex;
