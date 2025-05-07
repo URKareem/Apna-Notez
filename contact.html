@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact Us - College Notes Hub</title>
+    <link rel="stylesheet" href="Stylesheet/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+   <header class="navbar">
+    <h1 class="navbar-title">Apna Notez</h1>
+    <!-- Hamburger Button -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    ☰
+  </button>
+    <div class="nav-right" id="navLinks">
+      <a class="nav-button" href="index.html">Home</a>
+      <a class="nav-button" href="notes.html">Notes</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+    <div class="container">
+        <main>
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Have questions or feedback? We're here to help!</p>
+        </main>
+
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/xwpobvov" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="contribution">Note Submission</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                    </button>
+                    <div class="success-message" id="successMessage"></div>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2 class="info-title">Get in Touch</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Email Us</h3>
+                        <a href="mailto:support@collegenoteshub.com">support@collegenoteshub.com</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Call Us</h3>
+                        <a href="tel:+11234567890">+91 (123) 456-7890</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Visit Us</h3>
+                        <p>123 Education Street<br>Knowledge City, KC 10101</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209105766!2d-73.987844924525!3d40.748440971389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTQuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" aria-label="Our location on Google Maps"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 Apna Notez. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Scripting/script.js"></script>
+    </body>
