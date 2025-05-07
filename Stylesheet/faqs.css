@@ -326,3 +326,10 @@ header {
       display: flex; /* Show when toggled */
     }
 }
+
+
+@media (max-width: 374px){
+    .footer{
+        padding: 7px;
+    }
+}
