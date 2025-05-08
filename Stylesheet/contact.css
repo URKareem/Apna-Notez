@@ -382,7 +382,7 @@ main {
     }
 }
 
-@media (max-width: 374px){
+/* @media (max-width: 374px){
     .container {
         padding: 0.5rem;
     }
@@ -405,4 +405,4 @@ main {
     .footer{
         padding: 7px;
     }
-}
+} */
