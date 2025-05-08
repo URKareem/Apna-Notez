@@ -398,6 +398,10 @@ main {
     padding: 0.5rem 0.5rem;
     }
 
+    .info-text p, .info-text a{
+        font-size: 0.9rem;
+    }
+
     .footer{
         padding: 7px;
     }
